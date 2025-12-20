@@ -8,18 +8,18 @@ window.Signup = (event)=>{
     const email = document.getElementById("email")
     const password = document.getElementById("password")
     
-    createUserWithEmailAndPassword(auth, email.value, password.value ,firstname.value)
+    createUserWithEmailAndPassword(auth, email.value, password.value)
     .then(async (userCredential) => {
-    // Signed up 
     const user = userCredential.user;
     console.log(user)
-    
+
     await setdataInFirebase(user.uid ,firstname.value,lastname.value ,email.value)
     firstname.value = ''
     lastname.value = ''
     email.value = ''
     password.value = ''
-
+    
+    window.location.replace("./dashboard.html")
     
     // ..
   })

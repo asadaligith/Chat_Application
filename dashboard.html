@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">U</div>
+        <div>
+          <h4 id="currentUserName">Loading...</h4>
+          <small>Online</small>
+        </div>
+      </div>
+
+      <h5 class="section-title">Users</h5>
+
+      <ul class="user-list" id="userList">
+        <!-- Other users will render here -->
+      </ul>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="chat">
+      <div class="chat-header" id="chatHeader">
+        Select a user to start chat
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages -->
+      </div>
+
+      <form class="chat-input" id="messageForm">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type a message..."
+          disabled
+        />
+        <button type="submit" disabled>Send</button>
+      </form>
+    </main>
+
+  </div>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

@@ -10,8 +10,8 @@
 
     <!-- From Uiverse.io by Yaya12085 --> 
 <div class="form-container">
-	<p class="title">Sign In</p>
-	<form class="form">
+	<p class="title">Login</p>
+	<form class="form" onsubmit="Login(event)">
         <div class="input-group">
 			<label for="email">Email</label>
 			<input type="email" name="email" id="email" required>
@@ -20,7 +20,7 @@
 			<label for="password">Password</label>
 			<input type="password" name="password" id="password" required>
 		</div>
-		<button class="sign">Sign UP</button>
+		<button class="sign">Login</button>
 	</form>
 
 	<div class="social-message">
@@ -47,10 +47,10 @@
 	</div>
 		
 	<p class="signup">Don't have an account?
-		<a rel="noopener noreferrer" href="/Signup.html" class="">Sign UP</a>
+		<a rel="noopener noreferrer" href="/Signup.html" class="">Create Account</a>
 	</p>
 </div>
     
-    <script type="module" src="/Signup.js"></script>
+    <script type="module" src="/logIn.js"></script>
 </body>
 </html>

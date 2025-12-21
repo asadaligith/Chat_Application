@@ -1,5 +1,18 @@
 import { auth, signInWithEmailAndPassword, onAuthStateChanged, } from "./config.js";
 
+// checkUser()
+
+// function checkUser(){
+//     onAuthStateChanged(auth, (user) => {
+//         if (!user) {
+//             console.log(`User not available`)
+//             window.location.replace("./index.html")  
+//         } 
+
+
+//     });
+    
+// }
 
 
 window.Login = (event)=>{
@@ -20,6 +33,7 @@ window.Login = (event)=>{
         const errorMessage = error.message;
     });
 }
+
 
 
 

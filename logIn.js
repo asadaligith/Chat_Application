@@ -1,18 +1,21 @@
 import { auth, signInWithEmailAndPassword, onAuthStateChanged, } from "./config.js";
 
-// checkUser()
+let currentUserName = document.getElementById("currentUserName");
+checkUser()
 
-// function checkUser(){
-//     onAuthStateChanged(auth, (user) => {
-//         if (!user) {
-//             console.log(`User not available`)
-//             window.location.replace("./index.html")  
-//         } 
+function checkUser(){
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log(`User available`)
+            window.location.replace("./dashboard.html")  
+        } else{
+            console.log(`No user available`)
+        }
 
 
-//     });
+    });
     
-// }
+}
 
 
 window.Login = (event)=>{
@@ -26,6 +29,8 @@ window.Login = (event)=>{
         const user = userCredential.user;
         console.log(user, "LogIn")
         window.location.replace("./dashboard.html")
+        currentUserName.innerText = user.firstName + " " + user.lastName
+
         
     })
     .catch((error) => {

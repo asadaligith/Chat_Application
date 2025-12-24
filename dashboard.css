@@ -163,3 +163,31 @@ body {
   border-radius: 50%;
   margin-right: 10px;
 }
+
+
+.chat-menu {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-menu-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #e5e7eb;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.chat-menu-btn:hover {
+  background: #d1d5db;
+}
+
+.chat-menu-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+}

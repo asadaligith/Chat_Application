@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
   import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword, onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-  import { getFirestore , doc, getDoc ,collection, addDoc , setDoc, getDocs, query, where, serverTimestamp} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+  import { getFirestore , doc, getDoc ,collection, addDoc , setDoc, getDocs, query, updateDoc, where, onSnapshot, serverTimestamp} from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -36,5 +36,5 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebas
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut,
-    getDocs, query, where, serverTimestamp,
+    getDocs, query, where, serverTimestamp, updateDoc, onSnapshot,
   }
